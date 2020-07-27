@@ -14,7 +14,7 @@ html {
 
 }
 
-.main {
+.main {   
     display: grid;
     grid-template-columns: 2fr 8fr;
 }
@@ -42,11 +42,12 @@ nav a {
 
 }
 
+/*Link highlights over mouse*/
 a:hover {
     color: red;
    
 }
-
+/*Vertical nav bar through unlist tag*/
 nav ul {
     display: grid;
     height: 100%;
@@ -61,8 +62,8 @@ nav ul li {
 
 section {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 60%;
-    height: 500px;
+    width: 55%;
+    height: 55%;
     align-self: center;
     justify-self: center;
     overflow: scroll;
@@ -85,16 +86,33 @@ p {
 
 }
 
-
+ /*Spacing Nav a links/vertical */
 
 li a {
     display: block;
-    /* responsible for nav a being vertical */
-
+  
 }
+    
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.button {
+    margin: auto;
+    grid
+}
+
+
+button {
+    background-color: black;
+    color: red;
+    box-shadow: 2px 2px red;
+}
+
+#text {
+    color: red;
+    
 }

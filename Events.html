@@ -3,6 +3,16 @@
 <head>
     <title>goes in tab</title>
     <link rel="stylesheet" href="styles.css">
+<!--    <script href="code.js"></script>-->
+    <script>
+        var options = ['duck and cover', 'climb a tree', 'spontaneously combust', 'evacuate bowels']; //variable responses 
+        
+        function testing(){ // javaScript func
+            var rand = Math.floor(Math.random()*options.length);
+           document.getElementById('text').innerHTML = options[rand]; //this is for the javascript response, options is thge random variable of responses
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -11,20 +21,22 @@
             <ul>
                 <li><a href="index.html">APOCALYPSE</a></li>
                 <li><a href="Survival.html">SURVIVAL GUIDE</a></li>
-                <li><a href="Events.html">EVENTS</a></li>
+                <li><a href="Events.html">QUIZ</a></li>
             </ul>
 
         </nav>
 
         <section>
 
-            <h1>CURRENT EVENTS</h1>
-
-            <p></p>
-           
-                <img src="" width="550px" height="350px" class="img">
+            <h1>QUIZ</h1>
+            <p> Text </p>
             
-                <p></p>
+            <div class="button">  
+            
+           <button onclick="testing()">8-ball</button>      <!--  This makes button appear -->
+            <p id="text"></p>
+            </div>
+           
 
         </section>
     </div>
