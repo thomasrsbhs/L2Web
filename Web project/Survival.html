@@ -1,0 +1,73 @@
+<!doctype html>
+
+<head>
+    <title>goes in tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <ul>
+                <li><a href="index.html">APOCALYPSE</a></li>
+                <li><a href="Survival.html">SURVIVAL GUIDE</a></li>
+                <li><a href="Events.html">EVENTS</a></li>
+            </ul>
+
+        </nav>
+
+        <section>
+            <div class="second">
+
+                <h1>SURVIVAL GUIDE</h1>
+                <p>Here you will receive info on the rulers of the new world</p>
+
+                <!--  <p class="special" onclick="testing()"> </p>-->
+            </div>
+            
+            <div class="info1">
+                <p id="text1">Ben Shapiro</p>
+                <img id="slideReel" src="images/img0.PNG">
+<!--                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dTYzt-5uRPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+            </div>
+            
+
+            <div class="button">
+
+                <button onclick="testing()">New Entry</button>
+                <p id="special">Strengths</p>
+            </div>
+
+
+            <script>
+                function myFunction() {
+                    document.getElementById("demo").innerHTML = "";
+                }
+
+                  setInterval(imgChanger, 1000);
+                  var imgs = ['images/img0.PNG', 'images/img1.jpg', 'images/img2.PNG']
+                  //set list and change file path using array
+                  var i = 0;
+                
+                  function imgChanger() {
+                  var imagePath = 'images/img' + i + '.jpg';
+                  document.getElementById('slideReel').src = imagePath;
+                  // document.getElementById('slideReel').src = imgs[1];
+                  i++
+                  if (i >= imgs.length) {
+                  i = 0;
+                  }
+                      
+            </script>
+
+        </section>
+    </div>
+</body>
+
+
+
+
+
+
+<
