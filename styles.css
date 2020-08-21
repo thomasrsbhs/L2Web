@@ -1,0 +1,196 @@
+/*imported font*/
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Apocalypse.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*background (image) */
+html {
+    background-image: url('images/bg.jpg');
+    background-size: 100vw 100vh;
+
+}
+/*div for index*/
+.main {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+/*div for survival*/
+.second {
+    display: grid;
+    grid-template-columns: auto;
+    
+
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 65%;
+}
+
+.img2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+    
+}
+
+
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    justify-self: end;
+    height: 100vh;
+    width: 85%;
+
+}
+
+nav a {
+    font-family: 'myFirstFont';
+    padding: 30px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+
+
+}
+
+/*Link highlights over mouse*/
+a:hover {
+    color: red;
+
+}
+
+/*Vertical nav bar through unlist tag*/
+nav ul {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+
+nav ul li {
+    margin: 10% 0px;
+}
+
+
+section {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 70%;
+    height: 70%;
+    align-self: center;
+    justify-self: center;
+    /*    overflow: scroll;        scroll bar */
+}
+
+h1 {
+    text-align: center;
+    font-family: myFirstFont;
+    font-size: 20px;
+    color: white;
+
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px red;
+    color: white;
+    font-family: 'myFirstFont';
+    font-size: 15px;
+    padding: 5px;
+    
+}
+
+#title {
+    text-shadow: 2px solid blue;
+}
+
+p {
+    font-family: 'Bahnschrift';
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+
+}
+
+
+/*Spacing Nav a links/vertical */
+
+li a {
+    display: block;
+
+}
+
+/*vertical text*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*button asthetics*/
+button {
+    background-color: black;
+    border: 2px solid gold;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    font-size: 15px;
+    font-family: 'century gothic';
+    display: block;
+    /*This centres the button*/
+
+
+}
+
+/*allows for user response of button hover*/
+button:hover { 
+    background-color: red;
+    color: black;
+
+
+
+}
+
+#text {
+    color: red;
+
+}
+
+special {
+    color: yellow;
+    font-size: 20px;
+    text-decoration: underline;
+
+}
+/*images for survival page in array*/
+.info1 {
+    display: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+
+text1 {
+    font-size: 10px;
+    
+}
