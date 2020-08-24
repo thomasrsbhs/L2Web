@@ -1,8 +1,9 @@
 <!doctype html>
 
 <head>
-    <title>goes in tab</title>
+    <title>My Apocalypse</title>
     <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -10,49 +11,79 @@
         <nav>
             <ul>
                 <li><a href="index.html">APOCALYPSE</a></li>
-                <li><a href="Survival.html">SURVIVAL GUIDE</a></li>
-                <li><a href="Events.html">EVENTS</a></li>
+                <li><a href="Survival.html">SURVIVAL CODEX</a></li>
+                <li><a href="Events.html">QUIZ TEST</a></li>
             </ul>
 
         </nav>
 
         <section>
+            <div class="second">
 
-            <h1>SURVIVAL GUIDE</h1>
-                      <img src="images/bp.png" width="550px" height="350px" class="img"> 
+                <h1>SURVIVAL CODEX</h1>
+                <p>Here you can witness the enemies and allies of the feminist apocalypse</p>
+                <div class="title1">
+                    <h2 id="heading">BEN SHAPIRO</h2>
+                </div>
 
-<!--
-            <p>The offset of the feminist apocalypse has given rise to many dangerous creatures and powerful individuals</p>
-            <p>To survive an encounter with one of them, follow this survival guide at all costs </p>
--->
+                <div class="scrollbar" id="style-1">
+                    <div class="force-overflow"></div>
+                </div>
+
+                <iframe id="slideReel" class="img2" src="https://www.youtube.com/embed/dTYzt-5uRPg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                <p class="special" onclick="videoChanger()"></p>
+            </div>
+
+            <div class="button">
+
+                <button onClick="videoChanger()">Next Entry</button>
+
+            </div>
+
+            <div class="info1">
+                <p id="text1">Facts don't care about your feelings, neither does Ben Shapiro. The only one crazy enough to fight against feminist delusion. Fearless leaders like him are essential for survival in the hell of the apocalypse.</p>
+
+            </div>
+
+
+
+
 
             <script>
-                setInterval(imgChanger, 8000);
-                var imgs = ['images/img0.PNG', 'images/img1.jpg', 'images/img2.PNG']
-                //set list and change file path using array
+                // start of javaScript
+                var titles = [ //  title options for above the video
+                    'BEN SHAPIRO',
+                    'FEMINISTS',
+                    'THE CHAD'
+                ];
+
+                var options = [ // text options which changes with vids
+                    "Facts don't care about your feelings, neither does Ben Shapiro. The only one crazy enough to fight against feminist delusion. Fearless leaders like him are required to survive in the hell of the apocalypse.",
+                    'Behold, the meniacal feminist. Her sobering shriek can deafen even the strongest ears. Always keep your distance if you wish survive. Cut your hair short, wear pink bright clothing and say nothing to trigger the beast when you come in contact with it.',
+                    'The "Chad", a threat that should not be taken lightly, as they possess extreme strength and resistance to feminist propaganda. The pure testosterone they possess is enough to deter the most veteran of feminists'
+                ];
+
+
+                var videos = ["https://www.youtube.com/embed/dTYzt-5uRPg", "https://www.youtube.com/embed/wDYNVH0U3cs", "https://www.youtube.com/embed/hlnpkrJs6wM"]; // video sources
 
                 var i = 0;
 
-                function imgChanger() {
-                    var imagePath = 'images/img' + i + '.jpg';
-                    document.getElementById('slideReel').src = imagePath;
-                    //            document.getElementById('slideReel').src = imgs[1];
+                function videoChanger() { // text and vid change via button click
+
+                    document.getElementById("heading").innerHTML = titles[i];
+                    document.getElementById('slideReel').src = videos[i];
+                    document.getElementById('text1').innerHTML = options[i];
                     i++
-                    if (i >= imgs.length) {
+                    if (i >= videos.length) { // video array cycles through text and vids through button click
                         i = 0;
-
-
                     }
-
-                }
+                } // end of func
 
             </script>
 
-
-
-
-
-
         </section>
+
     </div>
 </body>

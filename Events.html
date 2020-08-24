@@ -1,0 +1,148 @@
+<!doctype html>
+
+<head>
+    <title>My Apocalypse</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <ul>
+                <li><a href="index.html">APOCALYPSE</a></li>
+                <li><a href="Survival.html">SURVIVAL CODEX</a></li>
+                <li><a href="Events.html">QUIZ TEST</a></li>
+            </ul>
+
+        </nav>
+
+        <section>
+
+            
+            <h1>TEST YOUR MIND</h1>
+            <p>Use this quiz to train your mind against the feminist threat. Answer these questions to see how you'd fair in the apocalypse.</p>
+
+
+            <div class="form">
+                <p id="question"></p>
+
+                <!--                Radio from questions-->
+                
+                <label><input name="choose" type="radio" id="option0" value="0">
+                    <h3 id="oText0"></h3>
+                </label><br>
+            
+                <label><input name="choose" type="radio" id="option1" value="1">
+                    <h3 id="oText1"></h3>
+                </label><br>
+                
+                <label><input name="choose" type="radio" id="option2" value="2">
+                    <h3 id="oText2"></h3>
+                </label><br>
+
+                <button id="quiz" onClick="check()">Submit</button>
+                <!--button-->
+                <p id="result"></p>
+            </div>
+
+
+            <script> //start of javaScript
+                
+                var questions = [ //  vars for array questions.length for p tag id question
+                    'How do you trigger a feminist?',                       // 0
+                    'How do you beat a feminist?',                          // 1
+                    'How many Feminists does it take to change a lightbulb?' // 2
+                    
+                ]
+                
+                var options = [ // answer vars for array questions
+                            [
+                                'Use facts and logic',          //0
+                                '"What wage gap?"',             //1
+                                'Open a door for them'          //2
+                            ], // [0][0]
+                            [
+                                'A Wet phonebook',               //0
+                                'Mansplaining',              //1
+                                'Assume HER gender'              //2   
+                            ], // [1][0-2]
+                            [
+                                'All of them (oh buddha)',                        //0
+                                'Maybe just one?',                                //1
+                                'Trick question, Feminists cant change anything'  //2
+                            ] // [2][0-2]
+                            ];
+                
+                var randQ = 0; //var must be declared outside of original function for var to be used anywhere else (public var)
+                
+                function launchQuestion(){ // array for questions in form
+                    randQ = Math.floor(Math.random()*questions.length); // selects a question randomly out of 3
+                    document.getElementById('question').innerHTML = questions[randQ];
+                    
+                    for(var i = 0; i<3;i++){
+                        document.getElementById('oText'+i).innerHTML = options[randQ][i];
+                    }
+                } // end of func
+                
+                function check(){ //checks the question [0-2] and answers [0-2] through and displays right or wrong result
+                    
+                    for(var i = 0; i<3;i++){
+                           if(document.getElementById('option'+i).checked){
+                                var answer = document.getElementById('option'+i).value;
+                               
+                           }
+                    }    
+                   if(randQ == 0){ // runs question and checks if answer is correct, results in a display of correct or dead
+                      if(answer == 0){
+                             document.getElementById('result').innerHTML = 'Correct';
+                             document.getElementById('result').style.color = 'green';
+                         }else{
+                             document.getElementById('result').innerHTML = 'This is no ordinary feminist. Shes coming straight for you!';
+                             document.getElementById('result').style.color = 'red';
+//                             alert('');
+                         }
+                      }
+                    
+                     if(randQ == 1){
+                      if(answer == 1){
+                             document.getElementById('result').innerHTML = 'Correct';
+                             document.getElementById('result').style.color = 'green';
+                         }else{
+                             document.getElementById('result').innerHTML = 'Sure that might work...On one!';
+                             document.getElementById('result').style.color = 'red';
+//                             alert('This is no ordinary feminist. Shes coming straight for you!');
+                         }
+                      }
+                    
+                     if(randQ == 2){
+                      if(answer == 2){
+                             document.getElementById('result').innerHTML = 'Correct';
+                             document.getElementById('result').style.color = 'green';
+                         }else{
+                             document.getElementById('result').innerHTML = "Come on you should know this... Unless, you're a Feminist?";
+                             document.getElementById('result').style.color = "red";
+//                             alert('This is no ordinary feminist. Shes coming straight for you!');
+                         }
+                      }
+                    
+                     setTimeout( // timer which refreshes page after answer is checked
+                         function(){
+                         window.location.href='Events.html';
+                     }
+                                , 3000);
+                    
+                    
+                } //end of func
+                
+                window.onload = function(){ // makes JavaScript run after page has fully loaded
+                    launchQuestion();
+                }
+                
+            
+            </script>
+
+        </section>
+    </div>
+</body>

@@ -1,3 +1,4 @@
+/*imported font*/
 @font-face {
     font-family: myFirstFont;
     src: url(fonts/Apocalypse.ttf);
@@ -8,45 +9,86 @@
     padding: 0px;
 }
 
+/*background & proportions (image) */
 html {
     background-image: url('images/bg.jpg');
     background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    color: white;
+    font-family: 'Bahnschrift';
 
 }
 
-.main {   
+body {
+    display: grid;
+    text-align: center;
+}
+
+/*div for index*/
+.main {
     display: grid;
     grid-template-columns: 2fr 8fr;
 }
 
+/*div for survival*/
+.second {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/*image on index*/
 .img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    height: 70%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+
 }
 
+iframe {
+    /* video on survival page */
+    border: 2px solid gold;
+    height: 50vh;
+    width: 40vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+
+}
+
+
 nav {
+    /*Navigation bar*/
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     justify-self: end;
     height: 100vh;
+    width: 80%;
+
 }
 
 nav a {
+    /*Navigation bar content*/
     font-family: 'myFirstFont';
-    padding: 30px;
-    font-size: 25px;
+    margin: 20px;
+    font-size: 22.5px;
     color: white;
     text-decoration: none;
 
 }
 
-/*Link highlights over mouse*/
+/*Link highlights over mouse nav*/
 a:hover {
     color: red;
-   
+
 }
+
 /*Vertical nav bar through unlist tag*/
 nav ul {
     display: grid;
@@ -61,60 +103,167 @@ nav ul li {
     margin: 10% 0px;
 }
 
-
+/*Secton background and style*/
 section {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 55%;
-    height: 55%;
+    width: 75%;
+    height: 70%;
     align-self: center;
     justify-self: center;
-    overflow: scroll;
+    overflow-y: scroll;
+
 }
 
+/*Text tag styles:*/
 h1 {
     text-align: center;
     font-family: myFirstFont;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
 
 }
 
-p {
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px red;
+    color: white;
+    font-family: 'myFirstFont';
+    font-size: 12.5px;
+    padding: 5px;
+
+}
+
+h3 {
+    display: block;
     font-family: 'Bahnschrift';
     text-align: center;
     width: 100%;
-    font-size: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+
+p { 
+    display: block;
+    font-family: 'Bahnschrift';
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
     color: white;
 
 }
 
- /*Spacing Nav a links/vertical */
 
 li a {
     display: block;
-  
-}
-    
 
+}
+
+/*Nav a vertical text and bar*/
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.button {
-    margin: auto;
-    grid
-}
 
 
+/*button asthetics*/
 button {
     background-color: black;
-    color: red;
-    box-shadow: 2px 2px red;
+    border: 2px solid gold;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+    width: 25%;
+    font-size: 15px;
+    font-family: 'century gothic';
+    display: block;
+    /*This centres the button*/
+
+
 }
 
-#text {
-    color: red;
+/*color change of button on mouse hover*/
+button:hover {
+    background-color: red;
+    color: black;
+
+
+
+}
+
+/*h1 class for survival page in array*/
+/*Survival page class/id styles:*/
+
+.title1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+
+/*Headings above videos in array*/
+#heading {
+    text-align: center;
+    text-shadow: 2px 2px red;
+    color: white;
+    font-family: 'myFirstFont';
+    font-size: 12.5px;
+    padding: 5px;
+
+}
+
+/* id for <p> text in array */
+#text1 {
+    font-family: 'Bahnschrift';
+    font-size: 15px;
+}
+
+/* class for <p> text*/
+.info1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* button ID quiz page*/
+#quiz {
+    margin: 20px auto;
+    border: 1px solid white;
+    width: 20%;
+
+
+}
+
+/*Quiz page class/id styles:*/
+.form {
+    justify-self: center;
+    font-family: 'Bahnschrift';
+    font-size: 15px;
+    margin: 10px auto;
+    
     
 }
+
+#option0 {
+   display: inherit;
+    justify-self: center;
+    margin: 10px auto;
+    
+}
+
+#question {
+    color: red;
+    font-size: 20px;
+    font-family: 'Bahnschrift';
+    display: inline-block;
+    margin: 20px auto;
+}
+
+#result {
+    font-size: 20px;
+}
+
